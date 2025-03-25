@@ -33,6 +33,12 @@ dependencies {
 
     // 테스트 관련 라이브러리 (JUnit 5 포함)
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+    // JPA 기능 추가
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    // mySQL 관련
+    implementation("mysql:mysql-connector-java:8.0.33")
 }
 
 tasks.withType<Test> {

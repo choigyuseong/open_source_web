@@ -22,10 +22,20 @@ public class WordBlankService {
     }
 
     public String blankPdfText(String text) {
-        return blankWords(text, importantWordRepository.getAll());
+        return blankWords(
+                text,
+                importantWordRepository.findAll().stream()
+                        .map(w -> w.getWord())
+                        .toList()
+        );
     }
 
     public String blankSummaryText(String text) {
-        return blankWords(text, importantWordRepository.getAll());
+        return blankWords(
+                text,
+                importantWordRepository.findAll().stream()
+                        .map(w -> w.getWord())
+                        .toList()
+        );
     }
 }

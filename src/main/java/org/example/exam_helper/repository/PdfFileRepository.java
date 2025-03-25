@@ -8,7 +8,7 @@ import java.io.IOException;
 
 @Repository
 public class PdfFileRepository {
-    private final String storageDir = "pdf_storage";
+    private final String storageDir = System.getProperty("user.dir") + File.separator + "pdf_storage";
 
     public PdfFileRepository() {
         File dir = new File(storageDir);
